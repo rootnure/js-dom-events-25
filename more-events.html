@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+
+<body>
+    <h1>Explore More events</h1>
+    <button id="btn-more">Events</button>
+    <input type="text" name="" id="text-field">
+
+    <script>
+        /* keyboard events */
+
+        // keydown
+        document.getElementById('text-field').addEventListener('keydown', function (event) {
+            console.log('keydown -->', event.target.value);
+        })
+        // keypress
+        document.getElementById('text-field').addEventListener('keypress', function (event) {
+            console.log('keypress -->', event.target.value);
+        })
+        // keyup (we will use this)
+        document.getElementById('text-field').addEventListener('keyup', function (event) {
+            console.log('keyup -->', event.target.value);
+        })
+
+
+
+        /* some mouse events */
+
+        // blur
+        document.getElementById('text-field').addEventListener('blur', function () {
+            console.log('event triggered on blur')
+        })
+        // focus
+        document.getElementById('text-field').addEventListener('focus', function () {
+            console.log('event triggered on focus')
+        })
+        // mousemove
+        document.getElementById('btn-more').addEventListener('mousemove', function () {
+            console.log('event triggered on mouse move');
+        })
+        // mouseenter
+        document.getElementById('btn-more').addEventListener('mouseenter', function () {
+            console.log('event triggered on mouse enter');
+        })
+    </script>
+</body>
+
+</html>
